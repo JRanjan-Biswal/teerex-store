@@ -1,0 +1,95 @@
+.product-card-container {
+    height: 250px;
+    width: 250px;
+    margin: 2rem;
+    background-color: rgb(179, 240, 243, 0.5);
+    /* border: 1px solid cadetblue; */
+    border-radius: 0.2rem;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-image {
+    height: 200px;
+}
+
+.product-card-image img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    object-fit: cover;
+    overflow: hidden;
+
+    transition: 200ms all; /* this transition is for the filter: brightness(70%)*/
+    filter: brightness(70%);
+}
+
+.product-card-image img:hover {
+    transition: 200ms all;
+    filter: brightness(90%) saturate(150%);
+}
+
+.product-card-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    color: black;
+    font-weight: 600;
+}
+
+.product-card-button {
+    border: none;
+    background-color: rgba(99, 227, 185, 0.5);
+    border: 1px solid rgba(99, 227, 185, 1);
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 600;
+    transition: box-shadow 150ms, background-color 150ms;
+}
+
+.product-card-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px rgb(0, 0, 0, 0.2);
+    background-color: rgb(203, 255, 238);
+}
+
+@media screen and (max-width: 463px) {
+    .product-card-container {
+        height: 200px !important;
+        width: 40% !important;
+        margin: 0.5rem !important;
+    }
+    .product-card-image {
+        height: 140px;
+    }
+    .product-card-button {
+        padding: 1px;
+    }
+    .product-card-info {
+        display: flex;
+        justify-content: space-around;
+        padding: 0.2rem;
+        color: black;
+        font-weight: 600;
+        font-size: small;
+    }
+    .product-card-button {
+        padding: 2px;
+        font-weight: 500;
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .product-card-container {
+        height: 200px;
+        width: 200px;
+        margin: 1rem;
+    }
+    .product-card-image {
+        height: 150px;
+    }
+    .product-card-button {
+        padding: 1px;
+    }
+}

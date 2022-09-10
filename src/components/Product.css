@@ -1,0 +1,327 @@
+.product-container {
+    /* position: relative; */
+    display: flex;
+    /* background-color: #4c5554; */
+    /* box-shadow: 0 0 50px 60px #4c5554; */
+    background-color: #26302f;
+    box-shadow: 0 0 50px 60px #26302f;
+    /* background-color: #283433;
+    box-shadow: 0 0 50px 60px #283433; */
+}
+
+.hero-container {
+    height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../public/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* object-fit: contain; */
+    background-size: cover;
+    /* z-index: 100; */
+}
+
+.product-search {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-top: 15rem;
+    height: 5rem;
+    /* z-index: 1000;
+    position: sticky;
+    top: 1rem; */
+}
+
+.product-search-input {
+    border: none;
+    /* border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    border-top: 3px solid rgba(0, 0, 0, 0.2); */
+    border: 1px solid rgba(129, 129, 129, 0.5);
+    border-radius: 0.2rem;
+    padding: 0;
+    margin: 0;
+    height: 5rem;
+    width: 50vw;
+    padding: 0 5px 0 5px;
+    background-color: transparent;
+    /* box-shadow: 0 0 25px 5px rgba(170, 241, 217, 0.7),
+        inset 0 0 25px 1px rgba(170, 241, 217, 0.7); */
+    transition: border-bottom 400ms, border-top 400ms, box-shadow 400ms;
+    font-weight: 600;
+    color: white;
+}
+
+.product-search-input:focus {
+    outline: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+    border-top: 2px solid black;
+    box-shadow: 0 0 25px 5px rgba(170, 241, 217, 0.7);
+}
+
+.product-search-input::placeholder {
+    text-align: center;
+}
+
+.product-search-button {
+    margin-left: 1rem;
+    width: 7rem;
+    height: 5.1rem;
+    border: hidden;
+    background-color: rgba(170, 241, 217, 0.2);
+    /* box-shadow: 0 0 25px 5px rgba(170, 241, 217, 0.7); */
+    border-radius: 0.2rem;
+    transition: background-color 200ms;
+}
+
+.product-search-button:hover {
+    cursor: pointer;
+    background-color: rgb(154, 177, 234);
+}
+
+.search-button-image {
+    height: 1rem;
+}
+
+.product-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.product-filter-container {
+    margin-top: 4rem;
+}
+
+/* // filter css */
+
+.filter-container {
+    position: sticky;
+    top: 1rem;
+    z-index: 100;
+    width: 9rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    /* padding-left: 2rem ; */
+    margin-left: 10px;
+    background-color: rgba(179, 240, 243, 0.5);
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 0.2rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.color-filter,
+.gender-filter,
+.price-filter,
+.type-filter {
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+    border-radius: 0.2rem;
+}
+
+.color-filter div div input[type="checkBox"],
+.gender-filter div div input[type="checkBox"],
+.price-filter div div input[type="checkBox"],
+.type-filter div div input[type="checkBox"] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    border-radius: 0.15rem;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transition: 0.3s all ease-in-out;
+}
+
+.color-filter div div input[type="checkBox"]:checked,
+.gender-filter div div input[type="checkBox"]:checked,
+.price-filter div div input[type="checkBox"]:checked,
+.gender-filter div div input[type="checkBox"]:checked {
+    background-color: rgb(154, 177, 234);
+    border: 1px solid #26302f;
+}
+
+.color-filter div div input[type="checkBox"]::before,
+.gender-filter div div input[type="checkBox"]::before,
+.price-filter div div input[type="checkBox"]::before,
+.type-filter div div input[type="checkBox"]::before {
+    position: absolute;
+    content: "\2713";
+    font-size: 1.7rem;
+    line-height: 0.5rem;
+    color: #26302f;
+    transform: scale(0);
+    transition: 0.3s all ease-in-out;
+}
+
+.color-filter div div input[type="checkBox"]:checked::before,
+.gender-filter div div input[type="checkBox"]:checked::before,
+.price-filter div div input[type="checkBox"]:checked::before,
+.type-filter div div input[type="checkBox"]:checked::before {
+    transform: scale(1);
+}
+
+.filter-container > div {
+    background-color: rgba(170, 241, 217, 0.5);
+    margin: 10px 0 10px 0;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.remove-all-filter-button {
+    background-color: rgb(154, 177, 234) !important;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.25rem;
+}
+
+.remove-all-filter-button:hover {
+    cursor: pointer;
+}
+
+.mobile-view-filters {
+    display: none;
+}
+
+.name-filter-desktop-view {
+    display: block;
+}
+
+.filter-by-name {
+    background-color: rgba(154, 177, 234, 0.4);
+    padding: 0 0.5rem 0;
+    border-radius: 0.2rem;
+}
+.filter-by-name::after {
+    content: "\00d7";
+    color: red;
+}
+.filter-by-name:hover {
+    cursor: pointer;
+}
+
+/* SCREEN SMALLER */
+
+@media screen and (max-width: 800px) {
+    .name-filter-desktop-view {
+        display: none;
+    }
+    .mobile-view-filters {
+        display: block;
+    }
+    .hero-container {
+        height: 30vh;
+    }
+    .product-filter-container {
+        margin-top: 0;
+    }
+    .product-main {
+        margin-top: 0;
+    }
+
+    .filters-button {
+        display: flex;
+        justify-content: center;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        column-gap: 1.2rem;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 0.4rem;
+    }
+
+    .filters-button-item {
+        padding: 0.2rem;
+        padding-top: 0;
+        color: black;
+        margin-bottom: 0.4rem;
+        border-radius: 0.2rem;
+        background-color: rgb(154, 177, 234);
+    }
+    .filters-button-item:hover {
+        cursor: pointer;
+    }
+
+    .filters-button-item::after {
+        content: "\00d7";
+        color: red;
+    }
+
+    .product-search {
+        margin-top: 2rem;
+    }
+    .product-search-input {
+        height: 2rem;
+    }
+    .product-search-button {
+        height: 2.1rem;
+        width: 2rem;
+    }
+    .product-container {
+        min-height: 100vh;
+        /* display: block !important; */
+        display: flex;
+        flex-direction: column;
+    }
+    .filter-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80vw;
+        height: 1.5rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .remove-all-filter-button {
+        margin-right: -10rem;
+    }
+    .remove-all-filter-button div {
+        display: none;
+    }
+    .remove-all-filter-button::before {
+        content: "\00d7";
+        line-height: 1rem;
+        color: red;
+        font-size: 2rem;
+    }
+
+    .remove-all-filter-button:hover div {
+        display: block;
+        position: absolute;
+        background-color: rgba(170, 241, 217, 0.5);
+        padding: 1rem;
+        border-radius: 0.25rem;
+    }
+
+    .color-filter,
+    .gender-filter,
+    .price-filter,
+    .type-filter {
+        padding: 0.2rem;
+        position: relative;
+    }
+
+    .color-filter > div:last-child,
+    .gender-filter > div:last-child,
+    .price-filter > div:last-child,
+    .type-filter > div:last-child {
+        display: none;
+    }
+
+    .color-filter:hover > div:last-child,
+    .gender-filter:hover > div:last-child,
+    .price-filter:hover > div:last-child,
+    .type-filter:hover > div:last-child {
+        display: block;
+        position: absolute;
+        width: max-content;
+        left: -5rem;
+        top: 2rem;
+        background-color: rgba(170, 241, 217, 0.5);
+        padding: 1rem;
+        border-radius: 0.25rem;
+    }
+}
